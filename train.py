@@ -60,8 +60,8 @@ def train():
         ("preprocessor", preprocessor),
         ("model", model),
     ])
-
-    pipeline.fit(X_train, y_train)
+    # TODO: Uncomment the code below
+    #pipeline.fit(X_train, y_train)
 
     joblib.dump(pipeline, config.MODEL_PATH)
     print(f"Model saved to {config.MODEL_PATH}")

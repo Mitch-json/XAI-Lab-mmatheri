@@ -2,10 +2,10 @@ import os
 import pandas as pd
 
 # Paths
-DATA_PATH = "data/credit_dataset2.csv" # TODO student to add the dataset path
+DATA_PATH = "data/credit..." # TODO student to modify the dataset path as instructed
 MODEL_DIR = "model"
 VIZ_DIR = "visualizations"
-MODEL_PATH = os.path.join(MODEL_DIR, "xgb_credit_model2.pkl")
+MODEL_PATH = os.path.join(MODEL_DIR, "xgb_credit_model1.pkl")
 RANDOM_STATE = 42
 
 # Data schema
@@ -30,8 +30,8 @@ NUMERICAL_COLS = [
 
 
 def load_data():
-    # Uncomment the read data_csv code below
-    df = pd.read_csv(DATA_PATH)
+    # TODO: Uncomment the read data_csv code below
+    # df = pd.read_csv(DATA_PATH)
     validate_schema(df)
     return df
 

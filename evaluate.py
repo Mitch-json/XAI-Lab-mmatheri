@@ -78,11 +78,10 @@ def evaluate():
         stratify=y,
         random_state=config.RANDOM_STATE,
     )
-
-    # Load trained pipeline
-    pipeline = joblib.load(config.MODEL_PATH)
-    preprocessor = pipeline.named_steps["preprocessor"]
-    model = pipeline.named_steps["model"]
+    # TODO: Unceomment the code below, to load trained pipeline
+    #pipeline = joblib.load(config.MODEL_PATH)
+    #preprocessor = pipeline.named_steps["preprocessor"]
+    #model = pipeline.named_steps["model"]
 
     # Predictions
     y_pred = pipeline.predict(X_test)
