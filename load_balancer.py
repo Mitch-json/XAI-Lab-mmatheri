@@ -33,12 +33,12 @@ server_pool = itertools.cycle(BACKEND_SERVERS)
 FORWARD_TIMEOUT = int(os.environ.get("FORWARD_TIMEOUT_SECS", "10"))
 
 
-# ── Helper ─────────────────────────────────────────────────────────────────────
+# ── Helper ─────────
 def _next_backend() -> str:
     return next(server_pool)
 
 
-# ── Routes ─────────────────────────────────────────────────────────────────────
+# ── Routes ────────
 @app.route("/model-info", methods=["GET"])
 def model_info():
     backend_url = _next_backend()
